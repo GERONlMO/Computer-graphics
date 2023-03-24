@@ -59,10 +59,14 @@
     </Compile>
     <Compile Include="GaussianFilter.cs" />
     <Compile Include="GrayScaleFilter.cs" />
+    <Compile Include="GrayWorld.cs" />
     <Compile Include="InvertFilter.cs" />
+    <Compile Include="LinearCorrection.cs" />
     <Compile Include="MatrixFilter.cs" />
+    <Compile Include="MoveFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RotateFilter.cs" />
     <Compile Include="SepiaFilter.cs" />
     <Compile Include="SharpeningFilter.cs" />
     <Compile Include="SobelFilter_X.cs" />

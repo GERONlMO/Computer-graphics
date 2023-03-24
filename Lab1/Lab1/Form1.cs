@@ -123,5 +123,29 @@ namespace Lab1
             Filters filter = new BorderHighlighting_Y();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void grayWorldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new GrayWorld(image);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void linearCorrectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new LinearCorrection(image);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void rotateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new RotateFilter(image);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void moveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new MoveFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
