@@ -32,7 +32,7 @@ namespace Lab1
 
         private void inversionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InvertFilter invertFilter = new InvertFilter();
+            Filters invertFilter = new InvertFilter();
             backgroundWorker1.RunWorkerAsync(invertFilter);
             
         }
@@ -66,13 +66,61 @@ namespace Lab1
 
         private void blurToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BlurFilter filter = new BlurFilter();
+            Filters filter = new BlurFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void gaussianBlurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Filters filter = new GaussianFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void grayScaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new GrayScaleFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SepiaFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void brightnessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new BrightnessFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void onXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SobelFilter_X();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void onYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SobelFilter_Y();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void sharpeningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SharpeningFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void onXToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Filters filter = new BorderHighlighting_X();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void onYToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Filters filter = new BorderHighlighting_Y();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }
