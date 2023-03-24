@@ -26,16 +26,13 @@ namespace Lab1
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
 
             for (int i = 0; i < sourceImage.Width; i++)
-                for (int j = 0; j < sourceImage.Height; j++)
-                    resultImage.SetPixel(i, j, calculateNewPixelColor(sourceImage, i, j));
-            for (int i = 0; i < sourceImage.Width; i++)
             {
-                
                 worker.ReportProgress((int)((float)i / resultImage.Width * 100));
                 if (worker.CancellationPending)
                     return null;
+                for (int j = 0; j < sourceImage.Height; j++)
+                    resultImage.SetPixel(i, j, calculateNewPixelColor(sourceImage, i, j));
             }
-
             return resultImage;
         }
 
