@@ -11,8 +11,8 @@ namespace Lab1
     {
         protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
         {
-            if (sourceImage.Width - 51 >= x) return sourceImage.GetPixel(x + 50, y);
-            return Color.FromArgb(0,0,0);
+            if (sourceImage.Width - 50 > x) return sourceImage.GetPixel(x + 50, y);
+            return Color.Empty;
         }
     }
 }

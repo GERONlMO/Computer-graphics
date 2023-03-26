@@ -30,6 +30,21 @@ namespace Lab1
             }
         }
 
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "JPeg Image|.jpg|Bitmap Image|.bmp|Gif Image|*.gif";
+            dialog.Title = "Save an Image File";
+            dialog.ShowDialog();
+
+            if (dialog.FileName != "")
+            {
+                System.IO.FileStream fs = (System.IO.FileStream)dialog.OpenFile();
+                pictureBox1.Image.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+                fs.Close();
+            }
+        }
+
         private void inversionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Filters invertFilter = new InvertFilter();
@@ -145,6 +160,12 @@ namespace Lab1
         private void moveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Filters filter = new MoveFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void glassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new GlassFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }

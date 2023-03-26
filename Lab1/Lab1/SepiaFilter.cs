@@ -16,8 +16,6 @@ namespace Lab1
             int k = 15;
             double intensity = 0.299 * sourceColor.R + 0.587 * sourceColor.G + 0.114 * sourceColor.B;
 
-
-
             Color resultColor = Color.FromArgb(Clamp((int)intensity + 2 * k, 0, 255), Clamp((int)(intensity + 0.5 * k), 0, 255), Clamp((int)intensity - 1 * k, 0, 255));
             return resultColor;
         }

@@ -38,6 +38,11 @@ namespace Lab1
             this.grayScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.brightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grayWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linearCorrectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.movingFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gaussianBlurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +57,8 @@ namespace Lab1
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.cancel = new System.Windows.Forms.Button();
-            this.grayWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linearCorrectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.movingFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rotateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.glassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +79,8 @@ namespace Lab1
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem});
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -107,7 +110,8 @@ namespace Lab1
             this.brightnessToolStripMenuItem,
             this.grayWorldToolStripMenuItem,
             this.linearCorrectionToolStripMenuItem,
-            this.movingFilterToolStripMenuItem});
+            this.movingFilterToolStripMenuItem,
+            this.glassToolStripMenuItem});
             this.pointedToolStripMenuItem.Name = "pointedToolStripMenuItem";
             this.pointedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pointedToolStripMenuItem.Text = "Pointed";
@@ -139,6 +143,43 @@ namespace Lab1
             this.brightnessToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.brightnessToolStripMenuItem.Text = "Brightness";
             this.brightnessToolStripMenuItem.Click += new System.EventHandler(this.brightnessToolStripMenuItem_Click);
+            // 
+            // grayWorldToolStripMenuItem
+            // 
+            this.grayWorldToolStripMenuItem.Name = "grayWorldToolStripMenuItem";
+            this.grayWorldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grayWorldToolStripMenuItem.Text = "Gray World";
+            this.grayWorldToolStripMenuItem.Click += new System.EventHandler(this.grayWorldToolStripMenuItem_Click);
+            // 
+            // linearCorrectionToolStripMenuItem
+            // 
+            this.linearCorrectionToolStripMenuItem.Name = "linearCorrectionToolStripMenuItem";
+            this.linearCorrectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.linearCorrectionToolStripMenuItem.Text = "Linear Correction";
+            this.linearCorrectionToolStripMenuItem.Click += new System.EventHandler(this.linearCorrectionToolStripMenuItem_Click);
+            // 
+            // movingFilterToolStripMenuItem
+            // 
+            this.movingFilterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.moveToolStripMenuItem,
+            this.rotateToolStripMenuItem});
+            this.movingFilterToolStripMenuItem.Name = "movingFilterToolStripMenuItem";
+            this.movingFilterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movingFilterToolStripMenuItem.Text = "Moving Filter";
+            // 
+            // moveToolStripMenuItem
+            // 
+            this.moveToolStripMenuItem.Name = "moveToolStripMenuItem";
+            this.moveToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.moveToolStripMenuItem.Text = "Move";
+            this.moveToolStripMenuItem.Click += new System.EventHandler(this.moveToolStripMenuItem_Click);
+            // 
+            // rotateToolStripMenuItem
+            // 
+            this.rotateToolStripMenuItem.Name = "rotateToolStripMenuItem";
+            this.rotateToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.rotateToolStripMenuItem.Text = "Rotate";
+            this.rotateToolStripMenuItem.Click += new System.EventHandler(this.rotateToolStripMenuItem_Click);
             // 
             // matrixToolStripMenuItem
             // 
@@ -222,7 +263,7 @@ namespace Lab1
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(9, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(733, 405);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -240,7 +281,7 @@ namespace Lab1
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(9, 447);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(648, 19);
             this.progressBar1.TabIndex = 2;
@@ -248,7 +289,7 @@ namespace Lab1
             // cancel
             // 
             this.cancel.Location = new System.Drawing.Point(671, 447);
-            this.cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancel.Margin = new System.Windows.Forms.Padding(2);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(71, 19);
             this.cancel.TabIndex = 3;
@@ -256,42 +297,19 @@ namespace Lab1
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
-            // grayWorldToolStripMenuItem
+            // glassToolStripMenuItem
             // 
-            this.grayWorldToolStripMenuItem.Name = "grayWorldToolStripMenuItem";
-            this.grayWorldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.grayWorldToolStripMenuItem.Text = "Gray World";
-            this.grayWorldToolStripMenuItem.Click += new System.EventHandler(this.grayWorldToolStripMenuItem_Click);
+            this.glassToolStripMenuItem.Name = "glassToolStripMenuItem";
+            this.glassToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.glassToolStripMenuItem.Text = "Glass";
+            this.glassToolStripMenuItem.Click += new System.EventHandler(this.glassToolStripMenuItem_Click);
             // 
-            // linearCorrectionToolStripMenuItem
+            // saveToolStripMenuItem
             // 
-            this.linearCorrectionToolStripMenuItem.Name = "linearCorrectionToolStripMenuItem";
-            this.linearCorrectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.linearCorrectionToolStripMenuItem.Text = "Linear Correction";
-            this.linearCorrectionToolStripMenuItem.Click += new System.EventHandler(this.linearCorrectionToolStripMenuItem_Click);
-            // 
-            // movingFilterToolStripMenuItem
-            // 
-            this.movingFilterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.moveToolStripMenuItem,
-            this.rotateToolStripMenuItem});
-            this.movingFilterToolStripMenuItem.Name = "movingFilterToolStripMenuItem";
-            this.movingFilterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.movingFilterToolStripMenuItem.Text = "Moving Filter";
-            // 
-            // moveToolStripMenuItem
-            // 
-            this.moveToolStripMenuItem.Name = "moveToolStripMenuItem";
-            this.moveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.moveToolStripMenuItem.Text = "Move";
-            this.moveToolStripMenuItem.Click += new System.EventHandler(this.moveToolStripMenuItem_Click);
-            // 
-            // rotateToolStripMenuItem
-            // 
-            this.rotateToolStripMenuItem.Name = "rotateToolStripMenuItem";
-            this.rotateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rotateToolStripMenuItem.Text = "Rotate";
-            this.rotateToolStripMenuItem.Click += new System.EventHandler(this.rotateToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -303,7 +321,7 @@ namespace Lab1
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -344,6 +362,8 @@ namespace Lab1
         private System.Windows.Forms.ToolStripMenuItem movingFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rotateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glassToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
     }
 }
 

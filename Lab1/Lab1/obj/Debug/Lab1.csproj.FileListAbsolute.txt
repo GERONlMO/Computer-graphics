@@ -29,3 +29,13 @@ C:\Users\sskam\OneDrive\Рабочий стол\2 Курс\Computer Graphics\Com
 C:\Users\sskam\OneDrive\Рабочий стол\2 Курс\Computer Graphics\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
 C:\Users\sskam\OneDrive\Рабочий стол\2 Курс\Computer Graphics\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.exe
 C:\Users\sskam\OneDrive\Рабочий стол\2 Курс\Computer Graphics\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.pdb
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\bin\Debug\Lab1.exe.config
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\bin\Debug\Lab1.exe
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\bin\Debug\Lab1.pdb
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.Form1.resources
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.Properties.Resources.resources
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.csproj.GenerateResource.cache
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.exe
+E:\Лобач\Компьютерная графика\Computer-graphics\Lab1\Lab1\obj\Debug\Lab1.pdb
